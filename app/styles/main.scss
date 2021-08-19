@@ -1,0 +1,686 @@
+@import "./base/reset";
+@import "./base/mixins";
+@import "./base/variables";
+@import "./base/fonts";
+
+.header {
+    width: auto;
+    height: 700px;
+    background-image: url(../images/Background-Header.png);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
+
+    &-container {
+        margin: 0 auto;
+        width: 70vw;
+
+        @media screen and (max-width: $madia-sm) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    &-login {
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap-reverse;
+    }
+
+    &-category {
+        font-size: 20px;
+        color: $white;
+        font-family: $primery-font;
+        margin: 10px 0 0;
+
+        @media screen and (max-width: $madia-sm) {
+            margin: 97px auto 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .text-header-login {
+        font-size: 14px;
+        font-family: $secondary-font;
+        color: $white;
+        margin: 0 0 10px;
+
+        @media screen and (max-width: $madia-sm) {
+            margin: 10px 0;
+        }
+    }
+
+    .button-header-login {
+        @include flex(row, center, center);
+        width: 90px;
+        height: 36px;
+        color: $white;
+        font-family: $secondary-font;
+        border: 2px solid $white;
+        border-radius: 20px;
+        margin: 0 0 0 19px;
+    }
+
+    &-info {
+        margin: 147px auto 0;
+
+        @media screen and (max-width: $madia-sm) {
+            margin: 26px 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &-title {
+        font-size: 52px;
+        text-align: center;
+        color: $white;
+        line-height: 63px;
+        font-family: $primery-font;
+
+        @media screen and (max-width: $madia-sm) {
+            font-size: 30px;
+            line-height: 37px;
+            margin: 0 auto;
+        }
+    }
+
+    &-text {
+        font-size: 24px;
+        text-align: center;
+        margin: 29px 0 0;
+        font-family: $last-font;
+        color: $white;
+    }
+
+    &-button {
+        @include flex(row, center, center);
+        width: 225px;
+        height: 40px;
+        background-color: $primery;
+        margin: 33px auto;
+        border-radius: 20px;
+        font-size: 14px;
+        font-family: $primery-font;
+        color: $white;
+    }
+
+    @media screen and (max-width: $madia-md) {
+        width: 100%;
+        height: 700px;
+        background-position: center;
+    }
+
+    @media screen and (max-width: $madia-sm) {
+        width: 100%;
+        height: 540px;
+        background-position: center;
+    }
+
+    .header-login {
+        @media screen and (max-width: $madia-sm) {
+            margin: 0 auto;
+        }
+    }
+}
+
+.content {
+    max-width: 940px;
+    margin: 0 auto;
+
+    @media screen and(max-width:$madia-md) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $madia-sm) {
+        min-width: 320px;
+    }
+
+    .works-block {
+        margin: 112px 0 0;
+
+        @media screen and(max-width:$madia-sm) {
+            margin: 35px 0 0;
+        }
+
+        .works-title {
+            font-size: 26px;
+            text-align: center;
+            font-family: $primery-font;
+            color: $secondary;
+
+            @media screen and(max-width:$madia-sm) {
+                font-size: 22px;
+                width: 289px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .block-Of-three-works {
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+
+        .block-works {
+            @include flex (row, flex-start, flex-end);
+            max-width: 300px;
+            max-height: 400px;
+            width: 32vw;
+            height: 40vw;
+            background-size: cover;
+            margin: 35px 0 0;
+
+            @media screen and (max-width: $madia-md) {
+                max-width: 236px;
+                max-height: 400px;
+                width: 32vw;
+                height: 50vw;
+            }
+
+            @media screen and(max-width:$madia-sm) {
+                max-width: 90%;
+                width: 90vw;
+                min-height: 240px;
+                height: 50vw;
+                background-position: center;
+                margin: 10px auto;
+
+            }
+
+            .work-step-info {
+                margin: 0 auto 16px;
+                width: 90%;
+            }
+
+
+            .step {
+                @include flex(row, center, center);
+                width: 70px;
+                height: 20px;
+                background-color: $primery;
+                border-radius: 20px;
+                font-size: 10px;
+                font-family: $secondary-font;
+                color: $white;
+            }
+
+            &-title {
+                margin: 18px 0 0;
+                font-size: 24px;
+                color: $white;
+                font-family: $primery-font;
+            }
+
+            &-text {
+                margin: 12px 0 0;
+                font-size: 14px;
+                line-height: 14px;
+                font-family: $last-font;
+                color: $last;
+            }
+        }
+
+        .step1 {
+            background-image: url(../images/step-1-image.png);
+            background-position: center;
+
+            @media screen and(max-width:$madia-sm) {}
+        }
+
+        .step2 {
+            background-image: url(../images/step-2-image.png);
+            background-position: center;
+
+            @media screen and(max-width:$madia-sm) {}
+        }
+
+        .step3 {
+            background-image: url(../images/step-3-image.png);
+            background-position: center;
+
+            @media screen and(max-width:$madia-sm) {}
+        }
+    }
+
+    .partner-holidey-block {
+        @media screen and (max-width: $madia-md) {
+            width: 492px;
+            margin: 0 auto;
+        }
+
+        @media screen and(max-width:$madia-sm) {
+            width: 300px;
+        }
+
+        .partner-holiday-title {
+            margin: 89px 0 0;
+            text-align: center;
+            font-size: 26px;
+            font-family: $primery-font;
+            color: $secondary;
+
+            @media screen and(max-width:$madia-sm) {
+                font-size: 22px;
+                margin: 36px 0 0;
+            }
+        }
+
+        .partner-holiday-container {
+            @include flex(row, space-between, flex-start);
+            flex-wrap: wrap;
+
+            .holiday-partner {
+                max-width: 221px;
+                width: 20vw;
+                height: 205px;
+                margin: 35px 0 0;
+
+                @media screen and (max-width: $madia-md) {
+                    width: 236px;
+                    height: 205px;
+                }
+
+                @media screen and(max-width:$madia-sm) {
+                    margin: 14px auto 0;
+                }
+
+                .partner-avatar {
+                    width: 120px;
+                    height: 120px;
+                    margin: 0 auto;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 100px;
+                    }
+
+                    .partner-icon {
+                        width: 37px;
+                        height: 37px;
+                        position: absolute;
+                        top: 88px;
+                        left: 88px;
+                        border-radius: 50%;
+                        border: 3px solid $white;
+                        @include flex(row, center, center);
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+
+                    .icon1 {
+                        background-color: $primery;
+                    }
+
+                    .icon2 {
+                        background-color: #19d4ca;
+                    }
+
+                    .icon3 {
+                        background-color: #ffa710;
+                    }
+
+                    .icon4 {
+                        background-color: #667df3;
+                    }
+                }
+
+                .name-partner {
+                    text-align: center;
+                    margin: 17px 0 0;
+                    font-size: 14px;
+                    color: $secondary;
+                    font-family: $primery-font;
+                }
+
+                .partner-info {
+                    text-align: center;
+                    font-size: 14px;
+                    color: #666;
+                    font-family: $last-font;
+                    margin: 12px 0 0;
+                }
+            }
+        }
+
+        .other-partner-button {
+            width: 180px;
+            height: 40px;
+            margin: 55px auto 0;
+            @include flex(row, center, center);
+            border-radius: 20px;
+            border: 2px solid $primery;
+            font-size: 14px;
+            font-family: $primery-font;
+            color: $primery;
+
+            @media screen and (max-width: $madia-md) {
+                margin: 35px auto 0;
+                width: 280px;
+                height: 40px;
+            }
+        }
+    }
+
+    .ideas-container {
+        .ideas-title {
+            font-size: 26px;
+            margin: 89px 0 35px 0;
+            text-align: center;
+            font-family: $primery-font;
+            color: $secondary;
+
+            @media screen and (max-width: $madia-md) {
+                font-size: 22px;
+                margin: 35px auto 33px;
+            }
+        }
+
+        .ideas-block {
+            @include flex(row, space-between, flex-start);
+            flex-wrap: wrap;
+
+            @media screen and (max-width: $madia-md) {
+                width: 100%;
+            }
+
+            .ideas-box {
+                margin: 0 0 20px 0;
+                max-width: 300px;
+                width: 32vw;
+                height: 310px;
+                background-position: center;
+                background-size: cover;
+
+                @media screen and (max-width: $madia-md) {
+                    max-width: 238px;
+                    width: 32vw;
+                    height: 310px;
+                }
+
+                @media screen and(max-width:$madia-sm) {
+                    max-width: 90%;
+                    width: 90vw;
+                    min-height: 120px;
+                    height: 40vw;
+                    margin: 0 auto 10px;
+
+                }
+            }
+
+            .last-ideas-box {
+                max-width: 620px;
+                width: 66vw;
+                height: 310px;
+                background-color: aqua;
+                margin: 0 0 20px 0;
+                background-size: cover;
+                background-position: center;
+
+                @media screen and (max-width: $madia-md) {
+                    max-width: 500px;
+                    width: 66vw;
+                    height: 310px;
+                    background-position: center;
+                }
+
+                @media screen and(max-width:$madia-sm) {
+                    max-width: 90%;
+                    width: 90vw;
+                    min-height: 120px;
+                    height: 40vw;
+                    margin: 0 auto 10px;
+                }
+            }
+
+            .mask {
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                z-index: 2;
+                @include flex(row, center, center);
+
+                .ideas-box-title {
+                    font-size: 22px;
+                    line-height: 27px;
+                    color: $white;
+                    font-family: $primery-font;
+
+                    @media screen and(max-width:$madia-md) {
+                        text-align: center;
+                        width: 206px;
+                    }
+                }
+            }
+
+            .image-sport {
+                background-image: url(../images/sport.jpg);
+            }
+
+            .image-health {
+                background-image: url(../images/health.png);
+            }
+
+            .image-extreme {
+                background-image: url(../images/extreme.png);
+            }
+
+            .image-games {
+                background-image: url(../images/games.png);
+            }
+
+            .image-culture {
+                background-image: url(../images/culture.png);
+            }
+
+            .image-trevelling {
+                background-image: url(../images/trevelling.png);
+            }
+
+            .image-relaxation {
+                background-image: url(../images/relaxation.png);
+            }
+        }
+
+        .last-ideas-block {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .activity {
+        @media screen and(max-width:$madia-sm) {
+            width: 100%;
+            text-align: center;
+        }
+
+        &-title {
+            margin: 89px 0 0;
+            text-align: center;
+            font-size: 26px;
+            font-family: $primery-font;
+            color: $secondary;
+
+            @media screen and(max-width:$madia-sm) {
+                font-size: 22px;
+                margin: 35px 0 0;
+            }
+        }
+
+        &-questions {
+            margin: 43px 0 0;
+            text-align: center;
+            font-size: 18px;
+            font-family: $last-font;
+            color: #666;
+
+            @media screen and(max-width:$madia-sm) {
+                margin: 9px 0 0;
+            }
+        }
+    }
+
+    .search-partners {
+        @include flex(row, center, flex-start);
+        flex-wrap: wrap;
+        margin: 25px 0 0;
+
+        @media screen and(max-width:$madia-sm) {
+            width: 280px;
+            margin: 15px auto 0;
+            text-align: center;
+        }
+
+        input[type="search"] {
+            width: 300px;
+            height: 40px;
+            padding: 0 0 0 10px;
+            font-size: 14px;
+            font-family: $last-font;
+
+            @media screen and(max-width:$madia-sm) {
+                width: 280px;
+                height: 40px;
+            }
+        }
+
+        .button-search {
+            width: 173px;
+            height: 40px;
+            background-color: $primery;
+            margin: 0 0 0 10px;
+            @include flex(row, center, center);
+            border-radius: 20px;
+            color: $white;
+            font-family: $primery-font;
+            font-size: 14px;
+
+            @media screen and(max-width:$madia-sm) {
+                width: 280px;
+                height: 40px;
+                margin: 10px auto 0;
+            }
+        }
+    }
+}
+
+.footer {
+    height: 224px;
+    border-block-start: 2px solid $primery;
+    margin: 100px 0 0 0;
+    @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+
+    @media screen and(max-width:$madia-sm) {
+        width: 100%;
+        height: 330px;
+    }
+
+    &-category {
+        margin: 38px auto;
+        color: $primery;
+        font-size: 16px;
+        font-family: $primery-font;
+
+        @media screen and(max-width:$madia-sm) {
+            width: 100%;
+            margin: 19px auto;
+            text-align: center;
+        }
+    }
+
+    &-info {
+        @include flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        margin: 38px auto;
+        width: 35vw;
+
+        @media screen and (max-width: $madia-md) {
+            width: 30vw;
+        }
+
+        @media screen and(max-width:$madia-sm) {
+            max-width: 55%;
+            width: 58vw;
+            margin: 13px auto 0;
+            text-align: center;
+        }
+    }
+
+    &-navigation {
+        @media screen and(max-width:$madia-sm) {}
+
+        .navigation-title {
+            font-size: 14px;
+            font-family: $primery-font;
+            color: $secondary;
+            margin: 0 0 11px;
+
+            @media screen and(max-width:$madia-sm) {
+                text-align: center;
+            }
+        }
+
+        .navigation-button {
+            display: block;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 26px;
+            color: #444;
+            font-family: $last-font;
+
+            @media screen and(max-width:$madia-sm) {
+                display: inline-block;
+                line-height: 26px;
+                margin: 0 10px 0 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .partners {
+        &-title {
+            font-size: 14px;
+            font-family: $primery-font;
+            color: $secondary;
+        }
+
+        @media screen and(max-width:$madia-sm) {
+            width: 100%;
+            text-align: center;
+            margin: 6px 0 0;
+        }
+    }
+
+    &-logo {
+        margin: 38px auto;
+
+        @media screen and (max-width: $madia-md) {
+            margin: 38px auto;
+        }
+
+        @media screen and (max-width: $madia-sm) {
+            @include flex(column, center, center);
+            width: 100%;
+            margin: 14px auto;
+        }
+    }
+
+    .logo-text {
+        font-size: 10px;
+        color: #cccc;
+        font-family: $primery;
+        margin: 2px 0 0 30px;
+        line-height: 12px;
+    }
+
+    .logo {
+        background-image: url(../images/logo.svg);
+        width: 110px;
+        height: 24px;
+        margin: 7px 0 0;
+    }
+}
